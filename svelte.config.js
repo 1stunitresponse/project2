@@ -9,7 +9,13 @@ const config = {
 
 	kit: {
 		adapter: adapter({ pages: "build", assets: "build", fallback: undefined, precompress: false, strict: true }),
+
+		paths: {
+			base: 'project2', // Replace 'your-repo' with your GitHub repository name
+		  },
 		}
+
+		
 };
 
 export default config;

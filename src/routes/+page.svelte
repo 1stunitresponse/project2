@@ -3,12 +3,12 @@
     import '../app.css';
 
 let images = [
-    'project2/assets/1.png',
-    'project2/assets/2.png',
-    'project2/assets/3.png',
-    'project2/assets/4.png',
-    'project2/assets/5.png',
-    'project2/assets/6.png',
+    'assets/1.png',
+    'assets/2.png',
+    'assets/3.png',
+    'assets/4.png',
+    'assets/5.png',
+    'assets/6.png',
   ];
   let currentSlide = 0;
 
