@@ -1,10 +1,12 @@
 <script>
     import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Button, Input } from 'flowbite-svelte';
+    import { base } from '$app/paths';
+    let logoUrl = `${base}/assets/logo.png`;
 </script>
   
   <Navbar>
     <NavBrand href="/">
-      <img src="/assets/logo.png" class="me-3 h-6 sm:h-9" alt="first unit response logo" />
+      <img src={logoUrl} class="me-3 h-6 sm:h-9" alt="first unit response logo" />
       <span class="self-center whitespace-nowrap text-xl font-semibold" style="color: #E72929">First Unit Response</span>
     </NavBrand>
     <div class="flex md:order-2">
