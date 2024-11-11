@@ -34,77 +34,77 @@
     { value: 'Other', name: 'Other' }
       ];
 
-    let errors = {
-    name: '',
-    contactNumber: '',
-    location: '',
-    landmark: '',
-    selected: '',
-    otherAssistance: ''
-  };
+  //   let errors = {
+  //   name: '',
+  //   contactNumber: '',
+  //   location: '',
+  //   landmark: '',
+  //   selected: '',
+  //   otherAssistance: ''
+  // };
   
 
-  const validateForm = () => {
-    let valid = true;
+  // const validateForm = () => {
+  //   let valid = true;
     
-    if (!name) {
-      errors.name = 'Name is required';
-      valid = false;
-    } else {
-      errors.name = '';
-    }
+  //   if (!name) {
+  //     errors.name = 'Name is required';
+  //     valid = false;
+  //   } else {
+  //     errors.name = '';
+  //   }
     
-    if (!contactNumber) {
-      errors.contactNumber = 'Contact number is required';
-      valid = false;
-    } else if (!/^\d{10}$/.test(contactNumber)) {
-      errors.contactNumber = 'Enter a valid 10-digit contact number';
-      valid = false;
-    } else {
-      errors.contactNumber = '';
-    }
+  //   if (!contactNumber) {
+  //     errors.contactNumber = 'Contact number is required';
+  //     valid = false;
+  //   } else if (!/^\d{10}$/.test(contactNumber)) {
+  //     errors.contactNumber = 'Enter a valid 10-digit contact number';
+  //     valid = false;
+  //   } else {
+  //     errors.contactNumber = '';
+  //   }
 
-    if (!location) {
-      errors.location = 'Location is required';
-      valid = false;
-    } else {
-      errors.location = '';
-    }
+  //   if (!location) {
+  //     errors.location = 'Location is required';
+  //     valid = false;
+  //   } else {
+  //     errors.location = '';
+  //   }
 
-    if (!landmark) {
-      errors.landmark = 'Landmark is required';
-      valid = false;
-    } else {
-      errors.landmark = '';
-    }
+  //   if (!landmark) {
+  //     errors.landmark = 'Landmark is required';
+  //     valid = false;
+  //   } else {
+  //     errors.landmark = '';
+  //   }
 
-    if (!selected) {
-      errors.selected = 'Please select an option';
-      valid = false;
-    } else {
-      errors.selected = '';
-    }
+  //   if (!selected) {
+  //     errors.selected = 'Please select an option';
+  //     valid = false;
+  //   } else {
+  //     errors.selected = '';
+  //   }
 
-    if (selected === 'other' && !otherAssistance) {
-      errors.otherAssistance = 'Please specify the assistance';
-      valid = false;
-    } else {
-      errors.otherAssistance = '';
-    }
+  //   if (selected === 'other' && !otherAssistance) {
+  //     errors.otherAssistance = 'Please specify the assistance';
+  //     valid = false;
+  //   } else {
+  //     errors.otherAssistance = '';
+  //   }
 
-    return valid;
-  };
+  //   return valid;
+  // };
 
-  // Form submission handler
-  const handleSubmit = () => {
-    if (validateForm()) {
-      // Proceed with form submission
-      alert('Form submitted successfully');
-    } else {
-      // Show validation errors
-      alert('Please fill out the form correctly');
-    }
-  };
+  // // Form submission handler
+  // const handleSubmit = () => {
+  //   if (validateForm()) {
+  //     // Proceed with form submission
+  //     alert('Form submitted successfully');
+  //   } else {
+  //     // Show validation errors
+  //     alert('Please fill out the form correctly');
+  //   }
+  // };
 
 
     // Image slideshow logic
@@ -173,11 +173,11 @@
                 <InputAddon>
                     <UserCircleSolid class="w-4 h-4 text-gray-500 dark:text-gray-400" />
                 </InputAddon>
-              <Input id="name" bind:value={name} placeholder="Juan Dela Cruz" class={errors.name ? 'border-red-500' : 'border-gray-300'} />
+              <Input id="name" bind:value={name} placeholder="Juan Dela Cruz"  />
             </ButtonGroup>
-            {#if errors.name}
+            <!-- {#if errors.name}
               <Helper class="mt-2" color="red">{errors.name}</Helper>
-            {/if}
+            {/if} -->
           </div>
 
     <!-- Contact Number -->
@@ -238,7 +238,9 @@
           </div>
 
           <div class="flex justify-center">
-          <button on:click={validateForm} class="mx-auto mt-5 lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full" style="background-color: #E72929; box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);">
+          <button  class="mx-auto mt-5 lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full" style="background-color: #E72929; box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);">
+            <!-- <button on:click={validateForm} class="mx-auto mt-5 lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full" style="background-color: #E72929; box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);"> -->
+
             <div class="absolute top-0 right-full w-full h-full bg-black opacity-20 group-hover:translate-x-full z-0 duration-200"></div>
             <h4 class="relative z-9 text-white">Submit &rarr;</h4>
           </button>
