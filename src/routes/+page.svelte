@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Alert } from "flowbite-svelte";
   import { DeviceMockup } from 'flowbite-svelte';
   import '../app.css';
 
@@ -98,7 +97,7 @@
           {currentText}
         </p>
       </div>
-      <a href="/portfolio" class="block">
+      <a href="/request" class="block">
         <button class="mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full" style="background-color: #E72929; box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);">
           <div class="absolute top-0 right-full w-full h-full bg-black opacity-20 group-hover:translate-x-full z-0 duration-200"></div>
           <h4 class="relative z-9 text-white">Ask Assistance &rarr;</h4>
