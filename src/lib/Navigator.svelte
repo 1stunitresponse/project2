@@ -1,5 +1,8 @@
 <script>
     import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Button, Input } from 'flowbite-svelte';
+    import { base } from '$app/paths';
+
+    
 </script>
   
   <Navbar class="relative z-20 p-1" >
@@ -13,7 +16,7 @@
     </div>
     <NavUl class="order-1">
       <NavLi style="color: #E72929" href="/">Home</NavLi>
-      <NavLi style="color: #E72929" href="/request">Form</NavLi>
+      <NavLi style="color: #E72929" href="{base}/request">Form</NavLi>
       <NavLi style="color: #E72929" href="/">Hotline</NavLi>
     </NavUl>
   </Navbar>
