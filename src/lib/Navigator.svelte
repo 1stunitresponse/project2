@@ -15,7 +15,7 @@
       <NavHamburger />
     </div>
     <NavUl class="order-1">
-      <NavLi style="color: #E72929" href="/">Home</NavLi>
+      <NavLi style="color: #E72929" href="{base}">Home</NavLi>
       <NavLi style="color: #E72929" href="{base}/request">Form</NavLi>
       <NavLi style="color: #E72929" href="/">Hotline</NavLi>
     </NavUl>
