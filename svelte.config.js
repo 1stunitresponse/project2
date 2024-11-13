@@ -21,6 +21,11 @@ const config = {
 		paths: {
 			base: '/project2', // replace with your repo name
 		  },
+		  prerender: {
+			handleHttpError: ({ status, path, referrer, referenceType }) => {
+			  if (status === 404 && referenceType === 'asset') return 'ignore';
+			},
+		  },
 	},
 };
 
