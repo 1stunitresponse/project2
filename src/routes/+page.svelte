@@ -1,41 +1,10 @@
 <script lang="ts">
   import { DeviceMockup } from 'flowbite-svelte';
   import '../app.css';
+  import { onMount} from 'svelte';
+  import { base } from '$app/paths';
 
-  // Image slideshow logic
-  let images = [
-    'assets/7.png',
-    'assets/8.png',
-    'assets/9.png',
-    'assets/10.png',
-  ];
-  let currentSlide = 0;
-
-  let intervalId: number;
-
-  // Start the slideshow
-  function startSlideshow() {
-    intervalId = setInterval(() => {
-      currentSlide = (currentSlide + 1) % images.length; // Loop back to the first image
-    }, 3000); // Change every 3 seconds
-  }
-
-  // Stop the slideshow
-  function stopSlideshow() {
-    clearInterval(intervalId);
-  }
-
-  import { onMount, onDestroy } from 'svelte';
-  
-  // Start the slideshow when the component is mounted
-  onMount(() => {
-    startSlideshow();
-  });
-
-  // Stop the slideshow when the component is destroyed
-  onDestroy(() => {
-    stopSlideshow();
-  });
+  let pictureUrl = `${base}/assets/1.png`;  
 
   // Typing animation logic
   let currentText = '';
@@ -75,14 +44,6 @@
 </script>
 
 <main class="relative">
-  <!-- <div id="slider" class="fixed inset-0 z-0 overflow-hidden">
-    {#each images as image, i}
-      <img 
-        src={image} 
-        alt={`Slide ${i}`} 
-        class="slide {i === currentSlide ? 'active' : ''} object-cover w-full h-full absolute inset-0 opacity-0 transition-opacity duration-1000" />
-    {/each}
-  </div> -->
 
   <section id="introPage" class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-x-0 py-10 px-5">
     
@@ -112,12 +73,7 @@
     <div class="animate-wiggle">
       <DeviceMockup device="ios">
         <img 
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-2-light.png" 
-          class="dark:hidden w-[272px] h-[572px]" 
-          alt="ios example 1" 
-        />
-        <img 
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-2-dark.png" 
+        src="{pictureUrl}" 
           class="hidden dark:block w-[272px] h-[572px]" 
           alt="ios example 2" 
         />
@@ -126,10 +82,10 @@
 
   </section>
 
-  <!-- <div class="flex justify-center mb-5 z[2]">
-    <img src='assets/logo.png' alt="logo" class="w-[300px] h-[300px]" />
-  </div> -->
-
-  <!-- <img src="assets/logo.png" alt="logo" class="absolute top-5 right-40 w-[300px] h-[300px] z-20" /> -->
+  <img 
+        src="/assets/2.png" 
+          class="hidden dark:block w-[272px] h-[572px]" 
+          alt="ios example 2" 
+        />
 
 </main>
