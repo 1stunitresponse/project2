@@ -4,8 +4,6 @@
   import { onMount} from 'svelte';
   import { base } from '$app/paths';
 
-  let pictureUrl = `${base}/assets/1.png`;  
-
   // Typing animation logic
   let currentText = '';
   let texts = ['Emergency is just a click away!', 
@@ -58,34 +56,29 @@
           {currentText}
         </p>
       </div>
-      <a href="/request" class="block">
-        <button class="mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full" style="background-color: #E72929; box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);">
-          <div class="absolute top-0 right-full w-full h-full bg-black opacity-20 group-hover:translate-x-full z-0 duration-200"></div>
-          <h4 class="relative z-9 text-white">Ask Assistance &rarr;</h4>
-        </button>
-        <button class="mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full" style="background-color: #000; box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);">
-          <div class="absolute top-0 right-full w-full h-full bg-white opacity-20 group-hover:translate-x-full z-0 duration-200"></div>
-          <h4 class="relative z-9 text-white">View Hotline &rarr;</h4>
-        </button>
-      </a>
+      <div class="flex  space-x-4">
+        <a href="{base}/request" class="block">
+          <button class="mx-auto text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full" style="background-color: #E72929; box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);">
+            <div class="absolute top-0 right-full w-full h-full bg-black opacity-20 group-hover:translate-x-full z-0 duration-200"></div>
+            <h4 class="relative z-9 text-white">Ask Assistance &rarr;</h4>
+          </button>
+        </a>
+        <a href="https://assistance.ph/philippine-emergency-hotline-numbers/" class="block">
+          <button class="mx-auto text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full" style="background-color: #000; box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);">
+            <div class="absolute top-0 right-full w-full h-full bg-white opacity-20 group-hover:translate-x-full z-0 duration-200"></div>
+            <h4 class="relative z-9 text-white">View Hotline &rarr;</h4>
+          </button>
+        </a>
+      </div>
+      
     </div>
      
     <div class="animate-wiggle">
       <DeviceMockup device="ios">
-        <img 
-        src="{pictureUrl}" 
-          class="hidden dark:block w-[272px] h-[572px]" 
-          alt="ios example 2" 
-        />
+        <img src="assets/phone2.png" class="dark:hidden w-[272px] h-[572px]" alt="ios example 1" />
       </DeviceMockup>
     </div>
 
   </section>
-
-  <img 
-        src="/assets/2.png" 
-          class="hidden dark:block w-[272px] h-[572px]" 
-          alt="ios example 2" 
-        />
 
 </main>

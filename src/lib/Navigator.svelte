@@ -11,12 +11,14 @@
       <span class="self-center whitespace-nowrap text-xl font-semibold" style="color: #E72929">First Unit Response</span>
     </NavBrand>
     <div class="flex md:order-2">
-      <Button size="sm">Get started</Button>
+      <a href="https://www.radio-philippines.com/">
+      <Button size="sm">Philippine Radio</Button>
       <NavHamburger />
+    </a>
     </div>
     <NavUl class="order-1">
       <NavLi style="color: #E72929" href="{base}">Home</NavLi>
       <NavLi style="color: #E72929" href="{base}/request">Form</NavLi>
-      <NavLi style="color: #E72929" href="/">Hotline</NavLi>
+      <NavLi style="color: #E72929" href="https://assistance.ph/philippine-emergency-hotline-numbers/">Hotline</NavLi>
     </NavUl>
   </Navbar>

@@ -19,7 +19,7 @@ const config = {
 			strict: true,
 		}),
 		paths: {
-			base: '/project2', // replace with your repo name
+			base: '/project2', 
 		  },
 		  prerender: {
 			handleHttpError: ({ status, path, referrer, referenceType }) => {
