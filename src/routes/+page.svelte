@@ -75,7 +75,7 @@
      
     <div class="animate-wiggle">
       <DeviceMockup device="ios">
-        <img src="assets/phone2.png" class="dark:hidden w-[272px] h-[572px]" alt="ios example 1" />
+        <img src="assets/phone3.png" class="dark:hidden w-[272px] h-[572px]" alt="ios example 1" />
       </DeviceMockup>
     </div>
 
